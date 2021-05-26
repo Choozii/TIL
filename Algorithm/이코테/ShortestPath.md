@@ -19,5 +19,4 @@
 <h5>다익스트라 알고리즘 구현 코드</h5>
 
 [O(V^2)인 방법](https://github.com/Choozii/TIL/blob/master/Algorithm/%EC%9D%B4%EC%BD%94%ED%85%8C/examples/Dijkstra.py)<br/>
-
-O(logN)인 방법
+[O(logN)인 방법](https://github.com/Choozii/TIL/blob/master/Algorithm/%EC%9D%B4%EC%BD%94%ED%85%8C/examples/Dijkstra2.py)
