@@ -17,6 +17,7 @@
 2) O(logN) 인 방법 ->  10.000개 초과하는 경우<br/>
 	- 최단거리를 직접 탐색x  => 우선순위 큐를 사용해서 거리가 작은 값부터 큐에서 나올 수 있도록 코드를 작성
 <h5>다익스트라 알고리즘 구현 코드</h5>
-1) O(V^2)인 방법
 
-2) O(logN)인 방법
+[O(V^2)인 방법](https://github.com/Choozii/TIL/blob/master/Algorithm/%EC%9D%B4%EC%BD%94%ED%85%8C/examples/Dijkstra.py)<br/>
+
+O(logN)인 방법
