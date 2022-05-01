@@ -10,7 +10,7 @@
 - React는 UI에서 변경된 부분만 update 해줌 -> super optimized for interactive web site
 	- ex. 카운터 프로그램
 		- vanilla js -> 버튼 클릭 시 모든 node가 rerender
-		- react -> 숫자 부분만 ㅕㄴ경
+		- react -> 숫자 부분만 변경
 
 
 		
