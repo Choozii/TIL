@@ -27,3 +27,13 @@
 	- 객체를 할당한 변수는 재할당 없이 객체를 직접 변경할 수 있음
 	- 객체만 mutable한 이유는 자바스크립트 객체는 크기가 일정하지 않고 property가 객체일수도 있어 deep copy하는 비용이 듦. 메모리의 효율적인 관리가 어려움. 메모리의 효율을 위해 어느정도의 구조적인 단점을 감안한 설계!
 	- 단점 : <u>여러 식별자가 하나의 객체를 공유하는 경우 한쪽에서 객체를 변경하면 영향을 받음</u> 
+	```
+	var person = {
+	name : 'Lee'	
+	};
+	var copy = person;
+	copy.name = 'Kim';
+
+	console.log(copy);	//{name : 'Kim'}
+	console.log(person);	//{name : 'Kim'}
+	```
