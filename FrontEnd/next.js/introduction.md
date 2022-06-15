@@ -1,7 +1,5 @@
 <h3> About Next.js 👻</h3>
 
-- Next.js는 동적 주소를 처리하지 못하기 때문에, express를 연결해서 동적 주소를 처리함
-
 - express method
   app.all() : 모든 요청 메소드에 대해 한 경로에서 미들웨어 함수를 로드하는데 사용됨
 
