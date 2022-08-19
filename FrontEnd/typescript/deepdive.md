@@ -2,6 +2,12 @@
 
 > https://radlohead.gitbook.io/typescript-deep-dive/type-system
 
+> https://joshua1988.github.io/ts/guide/basic-types.html#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85
+
+<h3>기본 타입</h3>
+
+- :를 사용하여 자바스크립트 코드에 타입을 정의할 수 있음
+- ex. let arr: number[] = [1,2,3]; 
 <h3>@types</h3>
 
 - 자바스크립트로 만들어진 써드 파티 라이브러리는 타입스크립트에서 사용하기 위해서 각 기능에 대한 타입이 정의되어 있어야 함
@@ -48,6 +54,10 @@ enum Color {
 }
 ```
 - 문자열이나 다른 숫자를 할당할 수 있음
+```
+enum Avengers {Capt, IronMan, Thor}
+let hero: Avengers = Avengers.Capt;
+```
 
 <h3>lib.d.ts</h3>
 
@@ -60,3 +70,10 @@ enum Color {
 - parameter와 return 값에 대해 type을 지정할 수 있음
 - parameter를 optional하게 표현할 수 있음/default value 지정해놓을 수 있음
 - 함수를 오버로드할 수 있음. 문서화+타입 보안에 유용함.
+
+<h3>제네릭</h3>
+
+- 재사용성이 높은 컴포넌트를 만들 때 자주 활용
+- 한가지 타입보다 여러가지 타입에서 동작하는 컴포넌트를 생성하는데 사용
+- 제네릭이란 타입을 마치 함수의 파라미터처럼 사용하는 것
+- 22
