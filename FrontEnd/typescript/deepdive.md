@@ -40,12 +40,29 @@ var myPoint.z; // Allowed!
 - interface에 간단하게 새 멤버를 추가할 수 있음
 - 클래스를 사용하려면 implements를 사용해 인터페이스와 호환 가능
 
+```
+interface personAge {
+  age: number;
+}
+
+function logAge(obj: personAge) {
+  console.log(obj.age);
+}
+let person = { name: 'Capt', age: 28 };
+logAge(person);
+```
+- 인터페이스에 정의된 속성, 타입의 조건만 만족한다면 객체의 속성 갯수가 더 많아도 상관 없음
+- readonly 속성을 정의할 수 있음(선언하는 시점에만 값을 정의 가능)
+- 타입 추론을 무시하고 싶다면 as 키워드를 사용해서 Type assertion 할 수 있음
+- 함수 타입을 정의할 때에도 사용 가능
+
 <h3>Enums</h3>
 
-- Enums는 관련 값 모음을 구성하는 방법
+- Enums는 특정 값들의 집합을 의미
 - 자바스크립트의 데이터 타입에는 없지만 타입스크립트 타입에는 존재
 - 열거형은 숫자가 디폴트
 - 디폴트로 enum은 0을 기준으로 1씩 값이 자동으로 증가
+- 초기 값을 주면 초기 값부터 차례로 1씩 증가
 ```
 enum Color {
     Red, // 0
@@ -53,10 +70,14 @@ enum Color {
     Blue, // 2
 }
 ```
-- 문자열이나 다른 숫자를 할당할 수 있음
+- 문자열 이넘은 auto-increasing이 없고, 이넘 값 전부 초기화해주어야함
 ```
-enum Avengers {Capt, IronMan, Thor}
-let hero: Avengers = Avengers.Capt;
+enum Direction {
+    Up = "UP",
+    Down = "DOWN",
+    Left = "LEFT",
+    Right = "RIGHT",
+}
 ```
 
 <h3>lib.d.ts</h3>
@@ -67,13 +88,15 @@ let hero: Avengers = Avengers.Capt;
 
 <h3>함수</h3>
 
-- parameter와 return 값에 대해 type을 지정할 수 있음
+- parameter와 return 값에 대해 type을 지정할 수 있음 (반환 값에 타입을 정하지 않을 때는 void라도 사용)
 - parameter를 optional하게 표현할 수 있음/default value 지정해놓을 수 있음
 - 함수를 오버로드할 수 있음. 문서화+타입 보안에 유용함.
+- 
 
 <h3>제네릭</h3>
 
 - 재사용성이 높은 컴포넌트를 만들 때 자주 활용
 - 한가지 타입보다 여러가지 타입에서 동작하는 컴포넌트를 생성하는데 사용
 - 제네릭이란 타입을 마치 함수의 파라미터처럼 사용하는 것
-- 22
+
+<h3>타입 추론</h3>
