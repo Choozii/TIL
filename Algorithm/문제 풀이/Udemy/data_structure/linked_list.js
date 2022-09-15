@@ -25,20 +25,53 @@ class SinglyLinkedList{
         }
         return this;
     }
+    traversal(){
+        let current = this.head;
+
+        while(current){
+            console.log(current.val);
+            current = current.next;
+        }
+    }
+    pop(){
+        let current = this.head;
+        if(current === null) return undefined;
+
+        let newTail = current;
+        while(current.next){
+            newTail = current;
+            current = current.next;
+        }
+        
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        if(this.length === 0){
+            this.head = null;
+            this.tail = null;
+        }
+        return current;
+    }
+    shift(){
+        if(this.head === null) return undefined;
+
+        let current = this.head;
+        this.head = this.head.next;
+        this.length--;
+        if(this.length === 0){
+            this.head = null;
+            this.tail = null;
+        }
+        return current;
+    }
 }
 
 const list = new SinglyLinkedList();
 
-list.push(1);
-list.push(2);
-list.push(3);
-list.push(4);
 
-let pointer = list.head;
-console.log(pointer);
 
-while(pointer){
-    console.log(pointer);
-    pointer = pointer.next;
-
-}
+list.push(9);
+list.push(19);
+list.push(99);
+list.shift();
+console.log(list);
